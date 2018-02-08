@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchForm = props =>
+export default props =>
   <form className="search-form" onSubmit={(e)=>{
     e.preventDefault();
     props.onSearch(this.query.value);
@@ -19,5 +19,3 @@ const SearchForm = props =>
       </svg>
     </button>
   </form>
-
-export default SearchForm;

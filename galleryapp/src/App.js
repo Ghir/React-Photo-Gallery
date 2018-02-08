@@ -5,17 +5,15 @@ import {
   Switch,
 } from 'react-router-dom';
 
-// components
 import SearchForm from './components/SearchForm';
 import MainNav from './components/MainNav';
 import Process from './components/Process';
 import NotFound from './components/NotFound';
 
 
-
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       keyword: 'Sea'
     }

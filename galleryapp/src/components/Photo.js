@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Photo = props => {
+export default props => {
 
   const photos = props.images.map(image => {
     return (
@@ -25,5 +25,3 @@ const Photo = props => {
     )
   }
 }
-
-export default Photo
