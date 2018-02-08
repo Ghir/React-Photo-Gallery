@@ -3,11 +3,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
 }
-.Container {
-  margin-right: 30px;
-  margin-left: 30px;
-}
-
 h2 {
   font-size: 2em;
   margin: 52px 0 40px;
@@ -108,5 +103,15 @@ input {
   .main-nav li {
     margin: 10px;
     width: 100px;
+  }
+}
+
+@media only screen and (min-width: 1115px)  {
+  .Container {
+    margin-right: 200px;
+    margin-left: 200px;
+  }
+  .photo-container ul li {
+    margin-bottom: 20px;
   }
 }

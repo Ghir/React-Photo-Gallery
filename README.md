@@ -12,5 +12,6 @@ export default apiKey;
 ```
 
 ## Running
+* `cd galleryapp`
 * `npm install`
 * `npm start`

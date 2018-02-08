@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default props =>
   <nav className="main-nav">
     <ul>
       <li><Link to="/">Search</Link></li>
-      <li><Link to='/Art'>Art</Link></li>
-      <li><Link to='/City'>City</Link></li>
-      <li><Link to='/Birds'>Birds</Link></li>
+      <li><NavLink to='/Art'>Art</NavLink></li>
+      <li><NavLink to='/City'>City</NavLink></li>
+      <li><NavLink to='/Birds'>Birds</NavLink></li>
     </ul>
   </nav>
