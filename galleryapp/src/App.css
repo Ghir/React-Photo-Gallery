@@ -3,6 +3,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #3f4850;
 }
+.Container {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
 h2 {
   font-size: 2em;
   margin: 52px 0 40px;
