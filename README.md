@@ -1,9 +1,7 @@
-# JS-Project-9---Create-A-Gallery-App-With-React
-
-Build an image gallery using React and the Flickr API.
+Learning React - an image gallery that uses the Flickr API.
 
 
-## Config file
+### Config file
 Add a `config.js` file to `src` with your API key:
 
 ```
@@ -11,7 +9,7 @@ const apiKey = "YOUR-API-KEY";
 export default apiKey;
 ```
 
-## Running
+### Running
 * `cd galleryapp`
 * `npm install`
 * `npm start`
