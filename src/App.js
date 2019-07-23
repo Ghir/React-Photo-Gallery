@@ -7,9 +7,8 @@ import {
 
 import SearchForm from './components/SearchForm';
 import MainNav from './components/MainNav';
-import Process from './components/Process';
 import NotFound from './components/NotFound';
-
+import PhotoContainer from './components/PhotoContainer';
 
 export default class App extends Component {
   constructor() {
@@ -26,8 +25,8 @@ export default class App extends Component {
           <Route exact path="/" render={props => <SearchForm onSearch={keyword => this.setState({ keyword })} /> } />
           <Route path="/" component={MainNav} />
           <Switch>
-            <Route exact path="/" render={props => <Process keyword={this.state.keyword} /> } />
-            <Route exact path="/:tag" component={Process} />
+            <Route exact path="/" render={props => <PhotoContainer keyword={this.state.keyword} /> } />
+            <Route exact path="/:tag" component={PhotoContainer} />
             <Route component={NotFound} />
           </Switch>
         </div>

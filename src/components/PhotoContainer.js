@@ -12,12 +12,14 @@ class PhotoContainer extends Component {
   }
 
   componentDidMount() {
-    this.search(this.props.keyword);
+    this.search(this.props.keyword || this.props.match.params.tag);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.keyword !== this.props.keyword) {
+    if (nextProps.keyword && nextProps.keyword !== this.props.keyword) {
       this.search(nextProps.keyword);
+    } else if (nextProps.match && nextProps.match.params) {
+      this.search(nextProps.match.params.tag);
     }
   }
 
@@ -33,7 +35,7 @@ class PhotoContainer extends Component {
   render() {
     return (
       <div className="photo-container">
-        <h2>{this.props.keyword}</h2>
+        <h2>{this.props.keyword || this.props.match.params.tag}</h2>
         {
           (this.state.loading)
           ? <h4>Loading...</h4>
