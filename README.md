@@ -1,4 +1,6 @@
-Learning React - an image gallery that uses the Flickr API.
+Image gallery using the Flickr API.
+
+![Screeshot](./public/galleryapp.png)
 
 
 ### Config file
@@ -10,6 +12,5 @@ export default apiKey;
 ```
 
 ### Running
-* `cd galleryapp`
 * `npm install`
 * `npm start`
