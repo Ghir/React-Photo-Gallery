@@ -1,6 +1,8 @@
 ![Screeshot](./public/galleryapp.png)
 
-
+&nbsp;
+&nbsp;
+&nbsp;
 
 A React app that shows you photos pulled from Flickr.
 
