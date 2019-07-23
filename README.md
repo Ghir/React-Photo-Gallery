@@ -1,7 +1,6 @@
-Image gallery using the Flickr API.
-
 ![Screeshot](./public/galleryapp.png)
 
+A React app that shows you photos pulled from Flickr.
 
 ### Config file
 Add a `config.js` file to `src` with your API key:
