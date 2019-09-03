@@ -1,12 +1,11 @@
 ### React Photo Gallery
+Insert a search keyword and view the photos pulled from Flickr.
 
 ![Screenshot](./public/galleryapp.png)
 
 &nbsp;
 &nbsp;
 &nbsp;
-
-A React app that shows you photos fetched from Flickr.
 
 #### Config file
 Add a `config.js` file to `src` with your API key:
