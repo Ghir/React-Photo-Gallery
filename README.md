@@ -1,12 +1,14 @@
-![Screeshot](./public/galleryapp.png)
+### React Photo Gallery
+
+![Screenshot](./public/galleryapp.png)
 
 &nbsp;
 &nbsp;
 &nbsp;
 
-A React app that shows you photos pulled from Flickr.
+A React app that shows you photos fetched from Flickr.
 
-### Config file
+#### Config file
 Add a `config.js` file to `src` with your API key:
 
 ```
@@ -14,6 +16,6 @@ const apiKey = "YOUR-API-KEY";
 export default apiKey;
 ```
 
-### Running
+#### Running
 * `npm install`
 * `npm start`
