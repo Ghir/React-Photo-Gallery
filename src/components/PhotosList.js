@@ -13,7 +13,7 @@ export default props => {
   if (props.images.length > 0) {
     return (
       <ul>
-        { photos }
+        {photos}
       </ul>
     )
   } else {

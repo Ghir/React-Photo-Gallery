@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default props =>
-  <form className="search-form" onSubmit={(e)=>{
+export default props => {
+  const [query, setQuery] = useState('');
+
+  return <form className="search-form" onSubmit={(e) => {
     e.preventDefault();
-    props.onSearch(this.query.value);
+    props.onSearch(query);
     e.currentTarget.reset();
   }}>
     <input
-      ref={(input)=>this.query=input}
-      type="search"
+      onChange={(ev) => setQuery(ev.target.value)}
       placeholder="Search"
       required
     />
@@ -19,3 +20,5 @@ export default props =>
       </svg>
     </button>
   </form>
+}
+

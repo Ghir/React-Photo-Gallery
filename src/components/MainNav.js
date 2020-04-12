@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-export default props =>
+export default () =>
   <nav className="main-nav">
     <ul>
       <li><Link to="/">Search</Link></li>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import apiKey from '../config.js';
-
-import Photo from './Photo';
+import { API } from '../constants.js';
+import { API_KEY } from '../config.js';
+import PhotosList from './PhotosList';
 
 class PhotoContainer extends Component {
   constructor() {
@@ -23,13 +23,11 @@ class PhotoContainer extends Component {
     }
   }
 
-  search(keyword) {
-    this.setState({loading: true})
-    fetch(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${keyword}&per_page=24&safe_search=1&format=json&nojsoncallback=1`)
-      .then(response => response.json())
-      .then(data => {
-        this.setState({images: data.photos.photo, loading: false});
-      });
+  async search(keyword) {
+    this.setState({ loading: true })
+    const res = await fetch(`${API}&api_key=${API_KEY}&tags=${keyword}&per_page=24&safe_search=1&format=json&nojsoncallback=1`);
+    const data = await res.json();
+    this.setState({ images: data.photos.photo, loading: false });
   }
 
   render() {
@@ -38,8 +36,8 @@ class PhotoContainer extends Component {
         <h2>{this.props.keyword || this.props.match.params.tag}</h2>
         {
           (this.state.loading)
-          ? <h4>Loading...</h4>
-          : <Photo images={this.state.images} />
+            ? <h4>Loading...</h4>
+            : <PhotosList images={this.state.images} />
         }
       </div>
     );
